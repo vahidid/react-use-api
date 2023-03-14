@@ -3,13 +3,12 @@
  *
  * @param
  */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-import { AxiosLikeError, Options } from '../interfaces/hook.interface';
+import { AxiosLikeError } from '../interfaces/hook.interface';
 
-const useApi = <T extends any, R extends readonly any[]>(
-  apiFunc: (...args: R) => Promise<T>,
-  options?: Options
+const useApi = <T extends unknown, R extends readonly unknown[]>(
+  apiFunc: (...args: R) => Promise<T>
 ) => {
   const [data, setData] = useState<T>();
   const [error, setError] = useState<unknown>();
@@ -32,7 +31,7 @@ const useApi = <T extends any, R extends readonly any[]>(
         setError(err.message);
       } else {
         // everything else
-        setError('خطایی رخ داده است!');
+        setError('Something Wrong!');
       }
 
       Promise.reject(err);
