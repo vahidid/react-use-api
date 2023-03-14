@@ -6,7 +6,7 @@
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
   "repository": "https://github.com/vahidid/react-use-api",
-  "license": "MIT",
+  "license": "ISC",
   "keywords": [],
   "scripts": {
     "build": "run-p build:*",
@@ -104,6 +104,6 @@
     ]
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": "^16.0.0"
   }
 }
